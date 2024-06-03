@@ -7,7 +7,7 @@
     <test thread-count="5" name="FirefoxTest">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="App" />
+
 
         </classes>
     </test> <!-- Test -->

@@ -5,7 +5,7 @@
     <test thread-count="5" name="EdgeTest">
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="App" />
+            <class name="searching.App" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

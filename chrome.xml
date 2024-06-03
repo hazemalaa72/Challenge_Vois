@@ -5,7 +5,7 @@
     <test thread-count="5" name="ChromeTest">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="App" />
+            <class name="searching.App" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
