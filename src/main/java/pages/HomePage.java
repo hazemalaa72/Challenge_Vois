@@ -11,7 +11,7 @@ public class HomePage  {
     }
 
 public void setSeachWord(String seachWord){
-    driver.findElement(searchele).sendKeys("Vodafone");
+    driver.findElement(searchele).sendKeys(seachWord);
     driver.findElement(searchele).sendKeys(Keys.ENTER);
 
 }

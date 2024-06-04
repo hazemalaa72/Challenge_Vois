@@ -16,10 +16,9 @@ public class Basetests extends JsonDataReader {
     protected   WebDriver driver =null;
     protected HomePage home;
     protected String [] data=null;
-   protected String bingdata[];
     protected SearchResultsPage search;
     protected SoftAssert soft;
-    protected WebDriverWait wait;
+
     @BeforeClass
     public void setUp() throws IOException {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\test\\IdeaProjects\\Challenge_Vois\\Drivers\\chromedriver.exe");
@@ -30,7 +29,7 @@ public class Basetests extends JsonDataReader {
         search = new SearchResultsPage( driver );
         home = new HomePage( driver );
         soft = new SoftAssert ( );
-        wait = new WebDriverWait (driver, Duration.ofSeconds ( 5 ));
+
     }
     @AfterClass
     public  void tearDown() throws IOException {
