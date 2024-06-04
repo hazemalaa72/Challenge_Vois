@@ -1,10 +1,7 @@
 package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
@@ -18,7 +15,6 @@ public class Basetests extends JsonDataReader {
     protected String [] data=null;
     protected SearchResultsPage search;
     protected SoftAssert soft;
-
     @BeforeClass
     public void setUp() throws IOException {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\test\\IdeaProjects\\Challenge_Vois\\Drivers\\chromedriver.exe");
@@ -29,13 +25,11 @@ public class Basetests extends JsonDataReader {
         search = new SearchResultsPage( driver );
         home = new HomePage( driver );
         soft = new SoftAssert ( );
-
     }
     @AfterClass
     public  void tearDown() throws IOException {
         driver.quit();
     }
-
 }
   /*@BeforeTest
     //@Parameters("browser")

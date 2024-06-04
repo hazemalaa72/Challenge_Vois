@@ -16,6 +16,3 @@ public class Searchtests extends Basetests {
         soft.assertAll ( );
     }
     }
-
-
-
