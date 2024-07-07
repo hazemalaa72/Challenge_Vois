@@ -5,13 +5,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
+import pages.LastPage;
+import pages.Nextpage;
 import pages.SearchResultsPage;
 import testdata.JsonDataReader;
 import java.io.IOException;
 import java.time.Duration;
-public class Basetests extends JsonDataReader {
-    protected   WebDriver driver =null;
+public class BaseTest extends JsonDataReader {
+    protected  WebDriver driver ;
     protected HomePage home;
+    protected Nextpage nextpage;
+    protected LastPage lastPage;
     protected String [] data=null;
     protected SearchResultsPage search;
     protected SoftAssert soft;
@@ -24,6 +28,8 @@ public class Basetests extends JsonDataReader {
         driver.manage ( ).window ( ).maximize ( );
         search = new SearchResultsPage( driver );
         home = new HomePage( driver );
+        nextpage = new Nextpage( driver );
+        lastPage = new LastPage( driver );
         soft = new SoftAssert ( );
     }
     @AfterClass

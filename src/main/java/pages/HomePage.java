@@ -4,12 +4,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 public class HomePage  {
     private WebDriver driver;
-    private By searchele=By.id("sb_form_q");
+    private By searchelement=By.id("sb_form_q");
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 public void setSeachWord(String seachWord){
-    driver.findElement(searchele).sendKeys(seachWord);
-    driver.findElement(searchele).sendKeys(Keys.ENTER);
+    driver.findElement(searchelement).sendKeys(seachWord);
 }
+public SearchResultsPage searchelementclick(){
+        driver.findElement(searchelement).sendKeys(Keys.ENTER);
+        return new SearchResultsPage(driver);
+    }
 }

@@ -1,8 +1,9 @@
 {
-  "bing" : [{
-    "url" : "https://www.bing.com",
-    "searchword" : "Vodafone"
-  }
+  "bing" : [
+    {
+      "url": "https://www.bing.com",
+      "searchword": "Vodafone"
+    }
   ]
   }
 
